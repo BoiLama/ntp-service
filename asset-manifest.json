@@ -1,24 +1,20 @@
 {
   "files": {
-    "main.css": "/ntp-service/static/css/main.94d9d93e.chunk.css",
-    "main.js": "/ntp-service/static/js/main.c9887430.chunk.js",
-    "main.js.map": "/ntp-service/static/js/main.c9887430.chunk.js.map",
+    "main.js": "/ntp-service/static/js/main.f7dab547.chunk.js",
+    "main.js.map": "/ntp-service/static/js/main.f7dab547.chunk.js.map",
     "runtime-main.js": "/ntp-service/static/js/runtime-main.a4db5f04.js",
     "runtime-main.js.map": "/ntp-service/static/js/runtime-main.a4db5f04.js.map",
     "static/css/2.92d02543.chunk.css": "/ntp-service/static/css/2.92d02543.chunk.css",
-    "static/js/2.138738f0.chunk.js": "/ntp-service/static/js/2.138738f0.chunk.js",
-    "static/js/2.138738f0.chunk.js.map": "/ntp-service/static/js/2.138738f0.chunk.js.map",
+    "static/js/2.ae1d2bf7.chunk.js": "/ntp-service/static/js/2.ae1d2bf7.chunk.js",
+    "static/js/2.ae1d2bf7.chunk.js.map": "/ntp-service/static/js/2.ae1d2bf7.chunk.js.map",
     "index.html": "/ntp-service/index.html",
     "static/css/2.92d02543.chunk.css.map": "/ntp-service/static/css/2.92d02543.chunk.css.map",
-    "static/css/main.94d9d93e.chunk.css.map": "/ntp-service/static/css/main.94d9d93e.chunk.css.map",
-    "static/js/2.138738f0.chunk.js.LICENSE.txt": "/ntp-service/static/js/2.138738f0.chunk.js.LICENSE.txt",
-    "static/media/persik.ae9f0072.png": "/ntp-service/static/media/persik.ae9f0072.png"
+    "static/js/2.ae1d2bf7.chunk.js.LICENSE.txt": "/ntp-service/static/js/2.ae1d2bf7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a4db5f04.js",
     "static/css/2.92d02543.chunk.css",
-    "static/js/2.138738f0.chunk.js",
-    "static/css/main.94d9d93e.chunk.css",
-    "static/js/main.c9887430.chunk.js"
+    "static/js/2.ae1d2bf7.chunk.js",
+    "static/js/main.f7dab547.chunk.js"
   ]
 }
