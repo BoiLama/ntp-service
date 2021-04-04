@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/ntp-service/static/js/main.edcf19b0.chunk.js",
-    "main.js.map": "/ntp-service/static/js/main.edcf19b0.chunk.js.map",
+    "main.js": "/ntp-service/static/js/main.c6a414ef.chunk.js",
+    "main.js.map": "/ntp-service/static/js/main.c6a414ef.chunk.js.map",
     "runtime-main.js": "/ntp-service/static/js/runtime-main.a4db5f04.js",
     "runtime-main.js.map": "/ntp-service/static/js/runtime-main.a4db5f04.js.map",
     "static/css/2.92d02543.chunk.css": "/ntp-service/static/css/2.92d02543.chunk.css",
-    "static/js/2.316014d4.chunk.js": "/ntp-service/static/js/2.316014d4.chunk.js",
-    "static/js/2.316014d4.chunk.js.map": "/ntp-service/static/js/2.316014d4.chunk.js.map",
+    "static/js/2.16faeebe.chunk.js": "/ntp-service/static/js/2.16faeebe.chunk.js",
+    "static/js/2.16faeebe.chunk.js.map": "/ntp-service/static/js/2.16faeebe.chunk.js.map",
     "index.html": "/ntp-service/index.html",
     "static/css/2.92d02543.chunk.css.map": "/ntp-service/static/css/2.92d02543.chunk.css.map",
-    "static/js/2.316014d4.chunk.js.LICENSE.txt": "/ntp-service/static/js/2.316014d4.chunk.js.LICENSE.txt"
+    "static/js/2.16faeebe.chunk.js.LICENSE.txt": "/ntp-service/static/js/2.16faeebe.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a4db5f04.js",
     "static/css/2.92d02543.chunk.css",
-    "static/js/2.316014d4.chunk.js",
-    "static/js/main.edcf19b0.chunk.js"
+    "static/js/2.16faeebe.chunk.js",
+    "static/js/main.c6a414ef.chunk.js"
   ]
 }
