@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/ntp-service/static/js/main.c2021a27.chunk.js",
-    "main.js.map": "/ntp-service/static/js/main.c2021a27.chunk.js.map",
+    "main.js": "/ntp-service/static/js/main.10bbad5a.chunk.js",
+    "main.js.map": "/ntp-service/static/js/main.10bbad5a.chunk.js.map",
     "runtime-main.js": "/ntp-service/static/js/runtime-main.a4db5f04.js",
     "runtime-main.js.map": "/ntp-service/static/js/runtime-main.a4db5f04.js.map",
     "static/css/2.92d02543.chunk.css": "/ntp-service/static/css/2.92d02543.chunk.css",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.a4db5f04.js",
     "static/css/2.92d02543.chunk.css",
     "static/js/2.7e01bbe9.chunk.js",
-    "static/js/main.c2021a27.chunk.js"
+    "static/js/main.10bbad5a.chunk.js"
   ]
 }
