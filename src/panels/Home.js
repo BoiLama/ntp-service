@@ -7,6 +7,8 @@ import {
 	Header,
 	Button,
 	Group,
+	SimpleCell,
+	TabbarItem,
 	Cell,
 	Div,
 	Avatar,
@@ -14,32 +16,22 @@ import {
 }	from '@vkontakte/vkui';
 
 import {
-	Icon28FavoriteCircleFillYellow,
 	Icon28UserOutline,
 	Icon28WorkOutline,
 	Icon28WriteOutline,
-	Icon28HomeOutline
+	Icon28HomeOutline,
+	Icon28FavoriteOutline
 }	from '@vkontakte/icons';
 
-const Home = ({ id, go, fetchedUser }) => (
+const Home = ({ id, go }) => (
 	<Panel id={id}>
 		<PanelHeader>Новая тех Поддержка</PanelHeader>
-		{fetchedUser &&
-		<Group header={<Header mode="secondary">User Data Fetched with VK Bridge</Header>}>
-			<Cell
-				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
-				description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
-			>
-				{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-			</Cell>
-		</Group>}
-
 		<Group header={<Header mode="secondary">Коллектив НТП</Header>}>
 			<Div>
-				<Cell expandable before={<Icon28FavoriteCircleFillYellow/>} onClick={() => this.setState({ activePanel: 'panel2' })}>
+				<Cell expandable before={<Icon28FavoriteOutline/>} mode="secondary" onClick={go} data-to="Admin">
               		Администрация
             	</Cell>
-				<Cell expandable before={<Icon28UserOutline/>} onClick={() => this.setState({ activePanel: 'panel2' })}>
+				<Cell expandable before={<Icon28UserOutline/>} onClick={() => this.setState({ activePanel: 'persik' })}>
               		Агенты
             	</Cell>
 			</Div>
@@ -47,24 +39,20 @@ const Home = ({ id, go, fetchedUser }) => (
 
 		<Group header={<Header mode="secondary">Ссылки</Header>}>
 			<Div>
-				<Cell expandable before={<Icon28HomeOutline/>} onClick={() => this.setState({ activePanel: 'panel2' })}>
+				<Cell expandable before={<Icon28HomeOutline/>} onClick={() => this.setState({ activePanel: 'persik' })}>
               		Основная группа
             	</Cell>
-				<Cell expandable before={<Icon28WriteOutline/>} onClick={() => this.setState({ activePanel: 'panel2' })}>
+				<Cell expandable before={<Icon28WriteOutline/>} onClick={() => this.setState({ activePanel: 'persik' })}>
               		Копирайтеры НТП
             	</Cell>
-				<Cell expandable before={<Icon28WorkOutline/>} onClick={() => this.setState({ activePanel: 'panel2' })}>
+				<Cell expandable before={<Icon28WorkOutline/>} onClick={() => this.setState({ activePanel: 'persik' })}>
               		NTP Team
             	</Cell>
-			</Div>
-		</Group>
+			</Div> 
+      </Group>
+
 	</Panel>
 );
-<Panel id="panel2">
-<Cell expandable before={<Icon28WorkOutline/>} onClick={() => this.setState({ activePanel: 'persik' })}>
-NTP Team
-</Cell>
-</Panel>
 
 Home.propTypes = {
 	id: PropTypes.string.isRequired,
