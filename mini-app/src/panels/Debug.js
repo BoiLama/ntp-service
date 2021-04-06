@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import bridge from "@vkontakte/vk-bridge";
 
 import {
 	Panel,
@@ -10,25 +9,20 @@ import {
 	Banner,
 	Cell,
 	Div,
-	Footer,
 	CardGrid,
 	ContentCard,
 	Button
 }	from '@vkontakte/vkui';
 
 import {
-	Icon28HomeOutline,
 	Icon28ArrowUpRectangleOutline,
-	Icon28CancelOutline,
-	Icon20NotebookCheckOutline
+	Icon28CancelOutline
 }	from '@vkontakte/icons';
 
-bridge.send("VKWebAppFlashSetLevel", {"level": 1});
 const Debug = props => {
 	return (
 	<Panel id={props.id}>
 		<PanelHeader left={<PanelHeaderBack onClick={props.go} data-to="home"/>}>DEBUG</PanelHeader>
-		<Footer>Внимание, данный режим создан только для Даниила Путинцева (aka BoiLama)<br />Дальше бога нет, ответственность за потери данных и краш приложения несете ВЫ САМИ.</Footer>
 		<Group>
 			<Group mode="plain">
 				<Div>

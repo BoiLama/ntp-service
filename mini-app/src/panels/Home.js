@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
 import bridge from "@vkontakte/vk-bridge";
+
 import {
 	Panel,
 	PanelHeader,
@@ -8,9 +8,7 @@ import {
 	Group,
 	Cell,
 	Div,
-	Footer,
-	CardGrid,
-	ContentCard
+	Footer
 }	from '@vkontakte/vkui';
 
 import {
@@ -30,13 +28,7 @@ const Home = ({ id, go }) => {
 	const [simv, setSimv] = useState("Данные не получены");	//	Символы
 	const [warning, setWarning] = useState("Данные не получены");	//	Преды
 	const [ids, setIds] = useState("null");	//	ID VK
-	useEffect(() => {
-		bridge 
-		.send('VKWebAppGetUserInfo') 
-		.then(data => { 
-			setIds(data.id)
-		});
-	}, [ ] );
+	useEffect(() => {bridge .send('VKWebAppGetUserInfo') .then(data => { setIds(data.id) });}, [ ] );
 /*	Рейтинг	*/	  fetch("https://bots.boilama.xyz/ntp/stat/user.php?key=pJR295F0PqIHDTBYHgs6BBfGG&user=" + ids) .then(data => data.json()) .then(data => { if (data) {setReiting(data[0].ball)}  else {console.log('ошибка')}}) .catch(err => {console.log(err)})
 /*	Символы	*/	  fetch("https://bots.boilama.xyz/ntp/prof/user.php?key=pJR295F0PqIHDTBYHgs6BBfGG&user=" + ids) .then(data => data.json()) .then(data => { if (data) {setSimv(data[0].ball)} else {console.log('ошибка')}}) .catch(err => {console.log(err)})
 /*	Преды	*/	  fetch("https://bots.boilama.xyz/ntp/stat/user.php?key=pJR295F0PqIHDTBYHgs6BBfGG&user=" + ids) .then(data => data.json()) .then(data => { if (data) {setWarning(data[0].warn)} else {console.log('ошибка')}}) .catch(err => {console.log(err)})
@@ -66,22 +58,9 @@ const Home = ({ id, go }) => {
 			</Div> 
     	</Group>
 		<Footer>С любовью, BoiLama</Footer>
-		<Footer mode="secondary" onClick={go} data-to="Debug">v1.3.6</Footer>
+		<Footer mode="secondary" onClick={go} data-to="Debug">v1.3.7</Footer>
 	</Panel>
 	);
-};
-
-Home.propTypes = {
-	id: PropTypes.string.isRequired,
-	go: PropTypes.func.isRequired,
-	fetchedUser: PropTypes.shape({
-		photo_200: PropTypes.string,
-		first_name: PropTypes.string,
-		last_name: PropTypes.string,
-		city: PropTypes.shape({
-			title: PropTypes.string,
-		}),
-	}),
 };
 
 export default Home;

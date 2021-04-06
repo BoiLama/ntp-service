@@ -23,7 +23,6 @@ const Admin = props => {
 	const [id, setId] = useState("null");	//	ID VK
 	const [reiting, setReiting] = useState("Данные не получены");	//	Рейтинг
 	const [warning, setWarning] = useState("Данные не получены");	//	Преды
-	const [nick, setNick] = useState("Данные не получены");	//	Преды
 	const [simv, setSimv] = useState("Данные не получены");	//	Символы
 	const [role, setRole] = useState("Данные не получены");	//	Роль
 	useEffect(() => {
