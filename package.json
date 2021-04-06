@@ -4,6 +4,7 @@
   "description": "",
   "homepage": "https://boilama.github.io/ntp-service/",
   "main": "index.js",
+  "proxy": "http://bots.boilama.xyz",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
