@@ -19,19 +19,19 @@ import {
 	Icon28FavoriteOutline,
 	Icon28ChatsOutline,
 	Icon28MessagesOutline,
-	Icon28WarningTriangleOutline,
-	Icon28PaperplaneOutline
+	Icon28PaperplaneOutline,
+	Icon28CoinsOutline
 }	from '@vkontakte/icons';
 
 const Home = ({ id, go }) => {
 	const [reiting, setReiting] = useState("Данные не получены");	//	Рейтинг
 	const [simv, setSimv] = useState("Данные не получены");	//	Символы
-	const [warning, setWarning] = useState("Данные не получены");	//	Преды
+	const [ball, setBall] = useState("Данные не получены");	//	Преды
 	const [ids, setIds] = useState("null");	//	ID VK
 	useEffect(() => {bridge .send('VKWebAppGetUserInfo') .then(data => { setIds(data.id) });}, [ ] );
 /*	Рейтинг	*/	  fetch("https://bots.boilama.xyz/ntp/stat/user.php?key=pJR295F0PqIHDTBYHgs6BBfGG&user=" + ids) .then(data => data.json()) .then(data => { if (data) {setReiting(data[0].ball)}  else {console.log('ошибка')}}) .catch(err => {console.log(err)})
 /*	Символы	*/	  fetch("https://bots.boilama.xyz/ntp/prof/user.php?key=pJR295F0PqIHDTBYHgs6BBfGG&user=" + ids) .then(data => data.json()) .then(data => { if (data) {setSimv(data[0].ball)} else {console.log('ошибка')}}) .catch(err => {console.log(err)})
-/*	Преды	*/	  fetch("https://bots.boilama.xyz/ntp/stat/user.php?key=pJR295F0PqIHDTBYHgs6BBfGG&user=" + ids) .then(data => data.json()) .then(data => { if (data) {setWarning(data[0].warn)} else {console.log('ошибка')}}) .catch(err => {console.log(err)})
+/*	Преды	*/	  fetch("https://bots.boilama.xyz/ntp/stat/user.php?key=pJR295F0PqIHDTBYHgs6BBfGG&user=" + ids) .then(data => data.json()) .then(data => { if (data) {setBall(data[0].warn)} else {console.log('ошибка')}}) .catch(err => {console.log(err)})
 	return(
 	<Panel id={id}>
 		<PanelHeader>НТП Панель</PanelHeader>
@@ -39,7 +39,7 @@ const Home = ({ id, go }) => {
 			<Div>
 				<Cell expandable before={<Icon28FavoriteOutline/>} description="Рейтинг" >{reiting}</Cell>
 				<Cell expandable before={<Icon28MessagesOutline/>} description="Символы агента" >{simv}</Cell>
-				<Cell expandable before={<Icon28WarningTriangleOutline/>} description="Предупреждений" >{warning}</Cell>
+				<Cell expandable before={<Icon28CoinsOutline/>} description="Баллы" >{ball}</Cell>
 			</Div>
 		</Group>
 		<Group header={<Header mode="secondary">Звёзды НТП</Header>}>
@@ -58,7 +58,7 @@ const Home = ({ id, go }) => {
 			</Div> 
     	</Group>
 		<Footer>С любовью, BoiLama</Footer>
-		<Footer mode="secondary" onClick={go} data-to="Debug">v1.3.7</Footer>
+		<Footer mode="secondary" onClick={go} data-to="Debug">v1.4</Footer>
 	</Panel>
 	);
 };
